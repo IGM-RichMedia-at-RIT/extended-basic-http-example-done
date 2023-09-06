@@ -20,10 +20,10 @@ we want to send. We can factor that code out into a function to cut down
 on the code we have to write in the future.
 */
 const sendPage = (request, response, page) => {
-  response.writeHead(200, {'Content-Type': 'text/html'});
+  response.writeHead(200, { 'Content-Type': 'text/html' });
   response.write(page);
   response.end();
-}
+};
 
 /* Get index and getClient2 are handler functions for sending
 back our html pages. Since both of them would contain almost
@@ -46,10 +46,10 @@ will see that we can send back any type of resource we want including
 javascript, css, images, videos, etc.
 */
 const getMessage = (request, response) => {
-  response.writeHead(200, {'Content-Type': 'text/plain'} );
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
   response.write('Hello world');
   response.end();
-}
+};
 
 /* Remember that for our "const responses = require('./responses.js');"
 code to work in server.js, we need to export the content from this file.
